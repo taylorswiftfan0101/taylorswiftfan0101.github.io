@@ -1,0 +1,14 @@
+[
+  {
+    "id": "friday-night-funkin",
+    "title": "Friday Night Funkin",
+    "image": "fridaynightfunkin/logo.png",
+    "link": "fridaynightfunkin/index.html"
+  },
+  {
+    "id": "snow-rider-3d",
+    "title": "Snow Rider 3D",
+    "image": "snow_rider3d/snowrider3d.jpeg",
+    "link": "snow_rider3d/index.html"
+  }
+]
