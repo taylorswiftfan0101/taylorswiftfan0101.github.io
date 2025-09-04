@@ -1,0 +1,186 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    background-color: #d4d4d4;
+}
+/* Header */
+header {
+    width: 100%;
+    background: #333;
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+header img {
+    margin-right: 90%;
+    width: 15%;
+}
+header a, footer a {
+    margin: 0 10px;  
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+}
+header a:hover, footer a:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+/* Mid Container Grid */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    background-color: #d3d3d3;
+}
+#container div {
+    flex: 1 1 280px;
+    width: 280px;
+    margin: 10px;
+    background: #d4d4d4;
+    text-align: center;
+    border-radius: 15%;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+#container div img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 15%;
+    transition: transform 0.3s ease;
+}
+#container div:hover img {
+    transform: scale(1.05);
+}
+#container div:hover p {
+    transform: scale(1.1);
+}
+#container div:hover h3 {
+    transform: scale(1.1);
+}
+/* BIG Container Grid */
+#container-discov {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    background-color: #d3d3d3;
+}
+#container-discov div {
+    flex: 1 1 280px;
+    width: 280px;
+    margin: 10px;
+    background: #d4d4d4;
+    text-align: center;
+    border-radius: 15%;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+#container-discov div img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 15%;
+    transition: transform 0.3s ease;
+}
+#container-discov div:hover img {
+    transform: scale(1.05);
+}
+#container-discov div:hover p {
+    transform: scale(1.1);
+}
+#container-discov div:hover h3 {
+    transform: scale(1.1);
+}
+
+/* Status Effects */
+.soon {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.soon::after {
+    content: "COMING SOON";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Hover Borders */
+.ok:hover {
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}
+.FIX:hover,
+.soon:hover {
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Image Filters by Status */
+.ok img {
+    /*border: 3px solid #59f52d;*/
+}
+.FIX img {
+    filter: invert(100%);
+    opacity: 0.7;
+}
+.soon img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+/* FIX Icon Overlay */
+.FIX::after {
+    content: url('images/status/progress.jpeg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+}
+
+/* Embed Fullscreen */
+embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 250px;
+    background: #555;
+    text-align: center;
+    padding: 12px;
+}
