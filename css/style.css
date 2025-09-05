@@ -10,6 +10,39 @@ html, body {
     cursor: url('pointer.png'), pointer;
 }
 /* Header */
+.dashboard {
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* drops below dashboard img */
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  border-radius: 8px;
+  min-width: 150px;
+  padding: 8px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
 header {
     display: flex;
     justify-content: space-between; /* Links on left, image on right */
