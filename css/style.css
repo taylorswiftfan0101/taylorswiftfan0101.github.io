@@ -30,10 +30,13 @@ header a, footer a {
     color: white;
     text-align: center;
     font-family: monospace;
+    text-decoration: none;
 }
 #container div p {
     color: white;
     text-align: center;
+    font-family: monospace;
+    text-decoration: none;
 }
 header a:hover, footer a:hover {
     color: #ff4444;
@@ -50,7 +53,7 @@ header a:hover, footer a:hover {
 }
 #container div a:hover, #container div p:hover {
     color: #ff4444;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Mid Container Grid */
