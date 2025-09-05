@@ -642,11 +642,19 @@
     };
   </script>
 	  
-	    <script>
-    // Always scroll to the top on refresh/reload
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
-  </script>
+<script>
+  // Prevent browser from restoring old scroll position
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Delay scroll-to-top when page loads
+  window.onload = function () {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 3000); // 1000ms = 1 second delay
+  };
+</script>
+	  
   </body>
 </html>
