@@ -47,6 +47,21 @@
     counter();
 </script>
 </section>
+	  <!--Dashboard-->
+	  <script>
+function toggleMenu() {
+  const menu = document.getElementById("dashboardMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// Close menu if clicking outside
+window.onclick = function(e) {
+  if (!e.target.matches('.dashboard img')) {
+    document.getElementById("dashboardMenu").style.display = "none";
+  }
+}
+</script>
+
 </head>
 	
 <script>
