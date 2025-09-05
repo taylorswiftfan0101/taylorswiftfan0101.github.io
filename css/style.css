@@ -21,19 +21,19 @@ header {
     background-color: #111; /* Dark header */
     padding: 10px 20px;
 }
-
-header a {
+header a, footer a {
+    margin: 0 10px;  
     color: white;
-    text-decoration: none;
     margin-right: 15px;
-    font-family: Arial, sans-serif;
+    text-decoration: none;
+    font-family: monospace;
     font-weight: bold;
+    text-align: center;
 }
-
-header a:hover {
-    color: #f00; /* Red hover effect */
+header a:hover, footer a:hover {
+    color: #ff4444;
+    text-decoration: underline;
 }
-
 header img {
     width: 30px;
     height: auto;
