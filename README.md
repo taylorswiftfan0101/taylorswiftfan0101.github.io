@@ -1,5 +1,5 @@
 <!--![Banner](images/banners/yorokobi-banner.png)-->
-<img src="images/banners/yorokobi-banner.png" style="width:200%; image-rendering:pixelated;">
+<img src="images/banners/yorokobi-banner.png" style="width:200px; image-rendering:pixelated;">
 # *welcome to* **[Untitled]** 
  - releasing at 60 stratagems!
 **(should probably use json sooner or later lmao)**
