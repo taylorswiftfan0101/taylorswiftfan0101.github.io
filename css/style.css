@@ -9,10 +9,6 @@ html, body {
     cursor: url('cursor.png') 4 4, auto;
     cursor: url('pointer.png'), pointer;
 }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f0f9ff, #cce7ff);
-    }
 /* Header */
 header {
     display: flex;
