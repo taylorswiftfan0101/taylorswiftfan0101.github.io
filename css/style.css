@@ -221,6 +221,31 @@ embed {
     #toTopBtn:hover {
       background: #5865f2;
     }
+.search-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.search-box input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+}
+.search-box button:hover {
+  background: #555;
+}
+
 /* Footer */
 footer {
     margin-top: 250px;
