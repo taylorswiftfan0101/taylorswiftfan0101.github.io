@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 .preloader {
     position: fixed;
     top: 0;
@@ -21,7 +19,6 @@
     z-index: 100000000;
     transition: transform 2s ease-in-out;
 }
-
 .loader-gif img {
     width: 300px; /* Adjust size of GIF */
     image-rendering: pixelated;
@@ -33,7 +30,6 @@
     transform: translateY(-100vh);
     transition-delay: 1s;
 }
-
 .counter {
     color: #000;
     font-size: 0.1em;
@@ -41,13 +37,11 @@
     z-index: 1;
     margin-bottom: 10px;
 }
-
 .loading-text {
     color: #000;
     font-size: 0.1em;
     text-align: center;
 }
-
 .hide {
     opacity: 0;
     transition: 1s;
