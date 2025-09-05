@@ -184,7 +184,32 @@ embed {
     top: 0;
     left: 0;
 }
+    body {
+      height: 2000px; /* Just to make the page scrollable */
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f0f9ff, #cce7ff);
+    }
 
+    /* Floating button */
+    #toTopBtn {
+      position: fixed;   /* stays in place even when scrolling */
+      bottom: 20px;      /* distance from bottom */
+      right: 20px;       /* distance from right */
+      display: none;     /* hidden by default */
+      padding: 12px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 50%; /* round button */
+      background: #0077ff;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s, opacity 0.3s;
+    }
+
+    #toTopBtn:hover {
+      background: #005fcc;
+    }
 /* Footer */
 footer {
     margin-top: 250px;
