@@ -47,6 +47,10 @@ header a:hover, footer a:hover {
     color: #ff4444;
     text-decoration: underline;
 }
+#container div a, #container div p{
+    color: #ff4444;
+    text-decoration: underline;
+}
 
 /* Mid Container Grid */
 #container {
