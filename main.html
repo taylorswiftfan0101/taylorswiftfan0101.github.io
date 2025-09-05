@@ -30,6 +30,9 @@
     <div class="loading-text">Loading...</div>
 </div>
 
+
+
+	  
 <section>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
@@ -45,6 +48,17 @@
         }, 7);
     }
     counter();
+	document.getElementById("searchInput").addEventListener("keyup", function() {
+  const input = this.value.toLowerCase();
+  const games = document.querySelectorAll("#container > div");
+
+  games.forEach(game => {
+    const title = game.querySelector("h3")?.textContent.toLowerCase() || "";
+    const author = game.querySelector("p")?.textContent.toLowerCase() || "";
+    game.style.display = (title.includes(input) || author.includes(input)) ? "block" : "none";
+  });
+});
+</script>
 </script>
 </section>
 	  <!--Dashboard-->
