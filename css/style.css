@@ -10,37 +10,36 @@ html, body {
     cursor: url('pointer.png'), pointer;
 }
 /* Header */
-.dashboard {
-  position: relative;
-  display: inline-block;
-}
-
-.dashboard img {
+/* Dashboard button (your existing icon) */
+#dashboardBtn {
   width: 50px;
   cursor: pointer;
 }
 
-.dropdown-menu {
+/* Fixed dropdown menu */
+.dashboard-menu {
+  position: fixed;
+  top: 60px; /* drops below header */
+  right: 20px; /* stick to the right side */
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 10px;
   display: none;
-  position: absolute;
-  top: 60px; /* drops below dashboard img */
-  right: 0;
-  background: rgba(0,0,0,0.9);
-  border-radius: 8px;
-  min-width: 150px;
-  padding: 8px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  flex-direction: column;
+  min-width: 200px;
+  padding: 10px 0;
+  z-index: 9999; /* stay on top */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px;
+.dashboard-menu a {
+  padding: 12px 16px;
   color: white;
   text-decoration: none;
+  display: block;
 }
 
-.dropdown-menu a:hover {
-  background: rgba(255,255,255,0.1);
+.dashboard-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 header {
