@@ -48,33 +48,48 @@
 </script>
 </section>
 </head>
-	<input type="text" id="searchInput" placeholder="Search games..." style="padding: 8px; width: 250px;">
-
+	
 <script>
-document.getElementById("searchInput").addEventListener("keyup", function() {
-  const input = this.value.toLowerCase();
-  const games = document.querySelectorAll("#container > div");
+function searchGames() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const games = document.querySelectorAll("#container > div"); // game cards
 
   games.forEach(game => {
     const title = game.querySelector("h3")?.textContent.toLowerCase() || "";
     const author = game.querySelector("p")?.textContent.toLowerCase() || "";
-    game.style.display = (title.includes(input) || author.includes(input)) ? "block" : "none";
+
+    if (title.includes(input) || author.includes(input)) {
+      game.style.display = "block";
+    } else {
+      game.style.display = "none";
+    }
+
+    if (input === "") game.style.display = "block";
   });
-});
+}
 </script>
 
   <body>
+	  
 <header>
-    <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="favorite.html">Favorites</a>
-        <a href="discover.html">Discovery</a>
-        <a href="settings.html">Settings</a>
-        <a href="support.html">Support</a>
-        <a href="info.html">Info</a>
-    </div>
-    <img src="dashboard.png" alt="Dashboard" onerror="this.src='git.gif';" />
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="favorite.html">Favorites</a>
+    <a href="discover.html">Discovery</a>
+    <a href="settings.html">Settings</a>
+    <a href="support.html">Support</a>
+    <a href="info.html">Info</a>
+  </div>
+
+  <!-- Search bar inside header -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search games...">
+    <button onclick="searchGames()">🔍</button>
+  </div>
+
+  <img src="dashboard.png" alt="Dashboard" onerror="this.src='git.gif';" />
 </header>
+
 	  <marquee style="background-color:rgba(0, 0, 0, 0.5); color:white;">
 ////////////////////////S//E//A//R//C//H//E//N//G//I//N//E/////T//O//M//O//R//R//O//W/////////////////////////////////////////////////////////////////////////////
 	  </marquee>
