@@ -18,12 +18,14 @@ background: #000 url('load-bg.png') center/cover no-repeat; /*FUK THE CLUB UPP (
 z-index: 100000000;
 }
 .preloader:before {
-content: '';
 position: absolute;
 font-size: 5em;
 font-weight: 900;
 text-transform: uppercase;
 color: rgba(255,255,255,.03);
+}
+.preloader::before {
+content: url('loading.gif');
 }
 .preloader.active {
 transform: translateY(-100vh);
@@ -49,8 +51,10 @@ font-weight: 700;
 z-index: 1;
 }
 .counter:after{
-content: '%';
 font-size: 0.5em;
+}
+.counter::after{
+content: content: url('loading.gif');
 }
 .hide {
 opacity: 0;
