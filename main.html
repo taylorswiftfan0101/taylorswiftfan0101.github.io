@@ -21,32 +21,32 @@
           channel: '1329289920845713471' // #channels
       })
     </script>
-    	<!-- LOADING SCREEN BY @WilardzySenpai 03- -->
-        <div class="preloader">
-        <div class="counter"></div>
-		<div class="loading-text" id="loading-text">
-		</div> 
-		
+    	<!-- LOADING SCREEN BY @WilardzySenpai --> 
+	  <div class="preloader">
+    <div class="loader-gif">
+        <img src="loading.gif" alt="Loading..." />
     </div>
-    <section>
-    <!-- Loading Script -->
+    <div class="counter">0</div>
+    <div class="loading-text">Loading...</div>
+</div>
+
+<section>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript">
-	  function counter(){
-		  var count = setInterval(function(){
-			  var c = parseInt($('.counter').text());
-			  $('.counter').text((++c).toString());
-			  if (c == 100){
-				  clearInterval(count);
-				  $('.counter').addClass('hide')
-				  $('.preloader').addClass('active')
-			  }
-        // 1-100, 1 superfast countdown 50 mild countdown and so on, the higher number the slower.
-		  },7)
-	  }
-	  counter()
+<script type="text/javascript">
+    function counter() {
+        var count = setInterval(function() {
+            var c = parseInt($('.counter').text());
+            $('.counter').text((++c).toString());
+            if (c == 100) {
+                clearInterval(count);
+                $('.counter').addClass('hide');
+                $('.preloader').addClass('active');
+            }
+        }, 7);
+    }
+    counter();
 </script>
-	</section>	  
+</section>
 </head>
   <body>
 <header>
