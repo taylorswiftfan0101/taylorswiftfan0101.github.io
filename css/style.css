@@ -35,10 +35,11 @@ header a:hover {
 }
 
 header img {
-    width: 60px;
+    width: 30px;
     height: auto;
     image-rendering: pixelated;
-}header a:hover, footer a:hover {
+}
+header a:hover, footer a:hover {
     color: #ff4444;
     text-decoration: underline;
 }
