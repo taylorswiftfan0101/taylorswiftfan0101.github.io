@@ -204,8 +204,8 @@ embed {
     /* Floating button */
     #toTopBtn {
       position: fixed;   /* stays in place even when scrolling */
-      bottom: 20px;      /* distance from bottom */
-      right: 5px;       /* distance from right */
+      bottom: 12px;      /* distance from bottom */
+      right: 40px;       /* distance from right */
       display: none;     /* hidden by default */
       padding: 12px 16px;
       font-size: 16px;
