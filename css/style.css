@@ -29,6 +29,7 @@ header a, footer a {
 #container div a {
     color: white;
     text-align: center;
+    font-family: monospace;
 }
 #container div p {
     color: white;
