@@ -47,7 +47,7 @@ header a:hover, footer a:hover {
     color: #ff4444;
     text-decoration: underline;
 }
-#container div a, #container div p{
+#container div a:hover, #container div p:hover {
     color: #ff4444;
     text-decoration: underline;
 }
