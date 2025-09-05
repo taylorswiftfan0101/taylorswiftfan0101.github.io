@@ -611,7 +611,7 @@
       -->
       
     </div>
-	  
+	  	    <button id="toTopBtn">⬆ Top</button>
 <footer>
   <a href="sources.html">sources</a> 
   <a href="contributors.html">contribute</a> 
@@ -620,6 +620,26 @@
   <a href="socials.html">Socials</a> 
   <a href="versions.html">version V0.0.3</a>
 </footer>
+	    <script>
+    const toTopBtn = document.getElementById("toTopBtn");
+
+    // Show button when scrolled down 200px
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        toTopBtn.style.display = "block";
+      } else {
+        toTopBtn.style.display = "none";
+      }
+    };
+
+    // When clicked, scroll smoothly to top
+    toTopBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
 	    <script>
     // Always scroll to the top on refresh/reload
     window.onbeforeunload = function () {
