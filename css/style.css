@@ -26,8 +26,11 @@ header a, footer a {
     font-weight: bold;
     text-align: center;
 }
-#container div a, p {
-    margin: 0 10px;  
+#container div a {
+    color: white;
+    text-align: center;
+}
+#container div p {
     color: white;
     text-align: center;
 }
