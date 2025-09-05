@@ -9,25 +9,30 @@ html, body {
 }
 /* Header */
 header {
-    width: 100%;
-    background: #333;
     display: flex;
-    text-align: center;
-    padding: 10px;
+    justify-content: space-between; /* Links on left, image on right */
+    align-items: center;
+    background-color: #111; /* Dark header */
+    padding: 10px 20px;
 }
-header img {
-    margin-right: 90%;
-    width: 15%;
-}
-header a, footer a {
-    margin: 0 10px;  
+
+header a {
     color: white;
     text-decoration: none;
-    font-family: monospace;
+    margin-right: 15px;
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    text-align: center;
 }
-header a:hover, footer a:hover {
+
+header a:hover {
+    color: #f00; /* Red hover effect */
+}
+
+header img {
+    width: 60px;
+    height: auto;
+    image-rendering: pixelated;
+}header a:hover, footer a:hover {
     color: #ff4444;
     text-decoration: underline;
 }
