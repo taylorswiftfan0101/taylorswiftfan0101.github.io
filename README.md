@@ -1,4 +1,5 @@
 ![Banner](images/banners/yorokobi-banner.png)
+<img src="images/banners/yorokobi.png" style="width:200%">
 # *welcome to* **[Untitled]** 
  - releasing at 60 stratagems!
 **(should probably use json sooner or later lmao)**
