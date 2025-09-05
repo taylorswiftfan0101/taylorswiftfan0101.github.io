@@ -87,7 +87,18 @@ function searchGames() {
     <button onclick="searchGames()">🔍</button>
   </div>
 
-  <img src="dashboard.png" alt="Dashboard" onerror="this.src='git.gif';" />
+<!-- Dashboard Image -->
+<div class="dashboard">
+  <img src="dashboard.png" alt="Dashboard" onerror="this.src='git.gif';" onclick="toggleMenu()" />
+  
+  <!-- Hidden dropdown menu -->
+  <div id="dashboardMenu" class="dropdown-menu">
+    <a href="pages.html">📂 Pages</a>
+    <a href="settings.html">⚙ Settings</a>
+    <a href="info.html">ℹ Info</a>
+    <a href="support.html">💬 Support</a>
+  </div>
+</div>
 </header>
 
 	  <marquee style="background-color:rgba(0, 0, 0, 0.5); color:white;">
