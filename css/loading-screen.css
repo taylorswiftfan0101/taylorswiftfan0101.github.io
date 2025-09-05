@@ -23,7 +23,8 @@
 }
 
 .loader-gif img {
-    width: 100px; /* Adjust size of GIF */
+    width: 300px; /* Adjust size of GIF */
+    image-rendering: pixelated;
     height: auto;
     margin-bottom: 15px;
 }
