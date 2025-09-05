@@ -9,7 +9,12 @@
   <meta name="keywords" content="fun, stratagem, github, waterlemon">
         <!--thanks to @WilardzySenpai-->
     <link rel="stylesheet" href="css/loading-screen.css" />
-	  
+	    <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #searchInput { width: 300px; padding: 8px; }
+    .result { display: none; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+    .highlight { background: yellow; }
+  </style>
    <!-- <script src="javascript/themes.js"></script>
    <script src="javascript/quote.js"></script>
    <script src="stratagems.js"></script>-->
@@ -59,6 +64,29 @@
         <a href="info.html">Info</a>
     </div>
     <img src="dashboard.png" alt="Dashboard" onerror="this.src='git.gif';" />
+	<script>
+    function searchContent() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const results = document.querySelectorAll(".result");
+
+      results.forEach(div => {
+        div.style.display = "none"; // hide all first
+        div.innerHTML = div.innerHTML.replace(/<span class="highlight">|<\/span>/g, ""); // clear old highlights
+
+        if (div.textContent.toLowerCase().includes(input) && input !== "") {
+          div.style.display = "block"; // show if match
+
+          // highlight matches
+          const regex = new RegExp(`(${input})`, "gi");
+          div.innerHTML = div.textContent.replace(regex, `<span class="highlight">$1</span>`);
+        }
+      });
+    }
+  </script>
+
+	<input type="text" id="searchInput" placeholder="Search here...">
+  <button onclick="searchContent()">Search</button>
+
 </header>
 	  <marquee style="background-color:rgba(0, 0, 0, 0.5); color:white;">
 ////////////////////////S//E//A//R//C//H//E//N//G//I//N//E/////T//O//M//O//R//R//O//W/////////////////////////////////////////////////////////////////////////////
