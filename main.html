@@ -48,19 +48,23 @@
 </script>
 </section>
 	  <!--Dashboard-->
-	  <script>
-function toggleMenu() {
-  const menu = document.getElementById("dashboardMenu");
-  menu.style.display = (menu.style.display === "block") ? "none" : "block";
-}
+<script>
+const dashboardBtn = document.getElementById("dashboardBtn");
+const dashboardMenu = document.getElementById("dashboardMenu");
 
-// Close menu if clicking outside
-window.onclick = function(e) {
-  if (!e.target.matches('.dashboard img')) {
-    document.getElementById("dashboardMenu").style.display = "none";
+dashboardBtn.onclick = function() {
+  dashboardMenu.style.display = 
+    (dashboardMenu.style.display === "flex") ? "none" : "flex";
+};
+
+// Close if clicked outside
+window.addEventListener("click", function(e) {
+  if (!dashboardBtn.contains(e.target) && !dashboardMenu.contains(e.target)) {
+    dashboardMenu.style.display = "none";
   }
-}
+});
 </script>
+
 
 </head>
 	
