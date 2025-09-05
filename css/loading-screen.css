@@ -26,7 +26,7 @@
     width: 300px; /* Adjust size of GIF */
     image-rendering: pixelated;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .preloader.active {
@@ -36,7 +36,7 @@
 
 .counter {
     color: #000;
-    font-size: 5em;
+    font-size: 0.1em;
     font-weight: 700;
     z-index: 1;
     margin-bottom: 10px;
@@ -44,7 +44,7 @@
 
 .loading-text {
     color: #000;
-    font-size: 1.2em;
+    font-size: 0.1em;
     text-align: center;
 }
 
