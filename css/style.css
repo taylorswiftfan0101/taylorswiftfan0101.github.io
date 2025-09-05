@@ -7,6 +7,12 @@
 html, body {
     background-color: #d4d4d4;
 }
+body {
+    cursor: url('cursor.png') 4 4, auto;
+}
+a {
+    cursor: url('pointer.png'), pointer;
+}
 /* Header */
 header {
     display: flex;
