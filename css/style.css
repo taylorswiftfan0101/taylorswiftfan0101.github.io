@@ -26,6 +26,11 @@ header a, footer a {
     font-weight: bold;
     text-align: center;
 }
+#container div a, p {
+    margin: 0 10px;  
+    color: white;
+    text-align: center;
+}
 header a:hover, footer a:hover {
     color: #ff4444;
     text-decoration: underline;
