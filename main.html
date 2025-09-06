@@ -21,21 +21,6 @@
           channel: '1329289920845713471' // #channels
       })
     </script>
-	  
-<input type="text" id="searchInput" placeholder="Search games..." style="padding: 8px; width: 250px;">
-
-<script>
-document.getElementById("searchInput").addEventListener("keyup", function() {
-  const input = this.value.toLowerCase();
-  const games = document.querySelectorAll("#container > div");
-
-  games.forEach(game => {
-    const title = game.querySelector("h3")?.textContent.toLowerCase() || "";
-    const author = game.querySelector("p")?.textContent.toLowerCase() || "";
-    game.style.display = (title.includes(input) || author.includes(input)) ? "block" : "none";
-  });
-});
-</script>
 
 	  <!--Dashboard-->
 <script>
@@ -57,26 +42,6 @@ window.addEventListener("click", function(e) {
 
 
 </head>
-	
-<script>
-function searchGames() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const games = document.querySelectorAll("#container > div"); // game cards
-
-  games.forEach(game => {
-    const title = game.querySelector("h3")?.textContent.toLowerCase() || "";
-    const author = game.querySelector("p")?.textContent.toLowerCase() || "";
-
-    if (title.includes(input) || author.includes(input)) {
-      game.style.display = "block";
-    } else {
-      game.style.display = "none";
-    }
-
-    if (input === "") game.style.display = "block";
-  });
-}
-</script>
 
   <body>
   <!-- LOADING SCREEN -->
@@ -98,11 +63,36 @@ function searchGames() {
     <a href="info.html">Info</a>
   </div>
 
-  <!-- Search bar inside header -->
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search games...">
-    <button onclick="searchGames()">🔍</button>
-  </div>
+<!-- Search bar inside header -->
+<div class="search-box">
+  <input type="text" id="searchInputHeader" placeholder="Search games...">
+  <button id="searchBtnHeader">🔍</button>
+</div>
+
+<script>
+function filterGames(query) {
+  const input = query.toLowerCase();
+  const games = document.querySelectorAll("#container > div");
+
+  games.forEach(game => {
+    const title = game.querySelector("h3")?.textContent.toLowerCase() || "";
+    const author = game.querySelector("p")?.textContent.toLowerCase() || "";
+    game.style.display = (title.includes(input) || author.includes(input)) ? "block" : "none";
+  });
+}
+
+// live search while typing
+document.getElementById("searchInputHeader").addEventListener("keyup", function() {
+  filterGames(this.value);
+});
+
+// search when clicking button
+document.getElementById("searchBtnHeader").addEventListener("click", function() {
+  const query = document.getElementById("searchInputHeader").value;
+  filterGames(query);
+});
+</script>
+
 
 <!-- Dashboard Image -->
 <!-- Dashboard Icon -->
