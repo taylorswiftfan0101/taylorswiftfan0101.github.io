@@ -90,25 +90,26 @@ header a:hover, footer a:hover {
 
 /* Mid Container Grid */
 #container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 20px;
-    background-color: #d3d3d3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #d3d3d3;
+  justify-items: center;
+  align-items: start;
 }
+
 #container div {
-    flex: 1 1 280px;
-    width: 280px;
-    margin: 10px;
-    background: #d4d4d4;
-    text-align: center;
-    border-radius: 15%;
-    padding: 10px;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid transparent;
+  width: 280px;
+  min-height: 220px; /* fixed height for cards */
+  background: #d4d4d4;
+  text-align: center;
+  border-radius: 15%;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid transparent;
+  transition: opacity 0.3s ease;
 }
 #container div img {
     width: 100px;
