@@ -287,3 +287,24 @@ footer {
     text-align: center;
     padding: 40px;
 }
+header {
+    display: flex;
+    justify-content: space-between; /* space between left side links & right side controls */
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+/* Group dashboard button + search */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between dashboard and search */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 0; /* remove the hacky push */
+}
