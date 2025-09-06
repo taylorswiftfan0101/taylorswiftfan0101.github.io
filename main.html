@@ -33,11 +33,10 @@
 
 
 	  
-<section>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript">
-    counter();
-	document.getElementById("searchInput").addEventListener("keyup", function() {
+<input type="text" id="searchInput" placeholder="Search games..." style="padding: 8px; width: 250px;">
+
+<script>
+document.getElementById("searchInput").addEventListener("keyup", function() {
   const input = this.value.toLowerCase();
   const games = document.querySelectorAll("#container > div");
 
@@ -48,7 +47,7 @@
   });
 });
 </script>
-</section>
+
 	  <!--Dashboard-->
 <script>
 const dashboardBtn = document.getElementById("dashboardBtn");
