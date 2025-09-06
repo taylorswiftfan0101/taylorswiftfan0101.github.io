@@ -21,17 +21,6 @@
           channel: '1329289920845713471' // #channels
       })
     </script>
-    	<!-- LOADING SCREEN BY @WilardzySenpai --> 
-	  <div class="preloader">
-    <div class="loader-gif">
-        <img src="loading.gif" alt="Loading..." />
-    </div>
-    <div class="counter">0</div>
-    <div class="loading-text">Loading...</div>
-</div>
-
-
-
 	  
 <input type="text" id="searchInput" placeholder="Search games..." style="padding: 8px; width: 250px;">
 
@@ -90,7 +79,15 @@ function searchGames() {
 </script>
 
   <body>
-	  
+  <!-- LOADING SCREEN -->
+  <div class="preloader">
+    <div class="loader-gif">
+      <img src="loading.gif" alt="Loading..." />
+    </div>
+    <div class="counter">0</div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
 <header>
   <div class="nav-links">
     <a href="home.html">Home</a>
@@ -720,6 +717,13 @@ LORD    					OF 			CHAOS.
     }, 3000); // 1000ms = 1 second delay
   };
 </script>
-	  
+
+
+	  <script>
+window.addEventListener("load", () => {
+  document.querySelector(".preloader").style.display = "none";
+});
+</script>
+
   </body>
 </html>
