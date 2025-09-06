@@ -8,6 +8,8 @@ html, body {
     background-color: #d4d4d4;
     cursor: url('cursor.png') 4 4, auto;
     cursor: url('pointer.png'), pointer;
+    height: 100%;              /* full height page */
+    flex-direction: column;    /* stack header, content, footer */
 }
 /* Header */
 /* Dashboard button (your existing icon) */
@@ -281,7 +283,7 @@ embed {
 
 /* Footer */
 footer {
-    margin-top: 250px;
+    margin-top: auto;          /* pushes footer to bottom */
     background: #555;
     text-align: center;
     padding: 40px;
