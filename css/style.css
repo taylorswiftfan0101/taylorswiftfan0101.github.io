@@ -259,7 +259,7 @@ embed {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  margin-left: 50px;
+  margin-left: 80px; /*how far right you want this to be!*/
 }
 
 .search-box input {
