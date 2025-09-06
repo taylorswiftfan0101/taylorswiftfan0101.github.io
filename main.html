@@ -22,24 +22,6 @@
       })
     </script>
 
-	  <!--Dashboard-->
-<script>
-const dashboardBtn = document.getElementById("dashboardBtn");
-const dashboardMenu = document.getElementById("dashboardMenu");
-
-dashboardBtn.onclick = function() {
-  dashboardMenu.style.display = 
-    (dashboardMenu.style.display === "flex") ? "none" : "flex";
-};
-
-// Close if clicked outside
-window.addEventListener("click", function(e) {
-  if (!dashboardBtn.contains(e.target) && !dashboardMenu.contains(e.target)) {
-    dashboardMenu.style.display = "none";
-  }
-});
-</script>
-
 
 </head>
 
@@ -658,6 +640,26 @@ document.getElementById("searchBtnHeader").addEventListener("click", function() 
   <a href="info.html">ℹ Info</a>
   <a href="support.html">💬 Support</a>
 </div>
+
+
+	  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dashboardBtn = document.getElementById("dashboardBtn");
+  const dashboardMenu = document.getElementById("dashboardMenu");
+
+  dashboardBtn.onclick = function () {
+    dashboardMenu.style.display =
+      (dashboardMenu.style.display === "flex") ? "none" : "flex";
+  };
+
+  // Close if clicked outside
+  window.addEventListener("click", function (e) {
+    if (!dashboardBtn.contains(e.target) && !dashboardMenu.contains(e.target)) {
+      dashboardMenu.style.display = "none";
+    }
+  });
+});
+</script>
 
 
 	  
